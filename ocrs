@@ -1,1 +1,71 @@
+Key Actors
+Student: Registers, browses courses, reserves a seat, cancels a reservation, views schedule.
+Admin: Adds/removes courses, manages schedule, views reservations.
+Instructor: Views course reservations, updates course details, views student list (if needed).
+Major Use Cases
+Register/Login
+Browse/Search Courses
+Reserve Course
+Cancel Reservation
+View My Reservations/Schedule
+Add/Remove Course (Admin)
+Manage Course Schedule (Admin)
+View Student List (Instructor)
+Update Course Info (Instructor/Admin)
+ASCII Use Case Diagram
+Code
+             +---------------------------+
+             |   Online Course           |
+             |   Reservation System      |
+             +---------------------------+
+                      /|\    /|\    /|\
+                       |      |      |
+       +---------------+      |      +---------------+
+       |                      |                      |
++-------------+         +----------+          +-------------+
+|  Student    |         |  Admin   |          | Instructor  |
++-------------+         +----------+          +-------------+
+      |                     |                      |
+      |---------------------|----------------------|
+      |                     |                      |
+      |           +-----------------------+        |
+      |           |   Use Cases           |        |
+      |           +-----------------------+        |
+      |           |  - Register/Login     |        |
+      |           |  - Browse Courses     |        |
+      |           |  - Reserve Course     |        |
+      |           |  - Cancel Reservation |        |
+      |           |  - View Schedule      |        |
+      |           |  - Add/Remove Course  |        |
+      |           |  - Manage Schedule    |        |
+      |           |  - View Reservations  |        |
+      |           |  - Update Course Info |        |
+      |           |  - View Student List  |        |
+      |           +-----------------------+        |
+      |                     |                      |
+Mermaid Diagram (recommended for Markdown)
+If you want a diagram you can use with a tool that supports Mermaid (such as GitHub or VSCode), here’s one for your OCRS use case:
 
+Markdown
+```mermaid
+usecaseDiagram
+    actor Student
+    actor Admin
+    actor Instructor
+
+    Student -- (Register/Login)
+    Student -- (Browse/Search Courses)
+    Student -- (Reserve Course)
+    Student -- (Cancel Reservation)
+    Student -- (View My Schedule)
+
+    Admin -- (Add Course)
+    Admin -- (Remove Course)
+    Admin -- (Manage Schedule)
+    Admin -- (View Reservations)
+
+    Instructor -- (View Course Reservations)
+    Instructor -- (Update Course Info)
+    Instructor -- (View Student List)
+```
+Would you like a graphical UML file or markdown rendering for GitHub or other specific requirements?
